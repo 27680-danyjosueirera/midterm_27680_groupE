@@ -38,10 +38,6 @@ public class Transaction {
         return Id;
     }
 
-    public void setId(UUID id) {
-        Id = id;
-    }
-
     public Account getAccount() {
         return account;
     }
@@ -50,6 +46,10 @@ public class Transaction {
         this.account = account;
     }
 
+    public void setId(UUID id) {
+        Id = id;
+    }
+    
     public List<Card> getCards() {
         return cards;
     }

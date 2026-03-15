@@ -37,4 +37,9 @@ public class CustomerController {
     public ResponseEntity<List<Customer>> getByLocationName(@RequestParam String locationName) {
         return new ResponseEntity<>(customerService.findByLocationName(locationName), HttpStatus.OK);
     }
+
+    @GetMapping(value = "/by-location-code-tree", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Customer>> getByLocationCodeTree(@RequestParam String locationCode) {
+        return new ResponseEntity<>(customerService.findByLocationCodeTree(locationCode), HttpStatus.OK);
+    }
 }
